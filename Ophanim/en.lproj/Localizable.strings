@@ -1,0 +1,291 @@
+"hostedapp.add" = "Add app";
+"hostedapp.settings" = "Settings";
+"hostedapp.keymap" = "View Keymaps";
+"hostedapp.showInFinder" = "Show in Finder";
+"hostedapp.openCache" = "Open App Data";
+"hostedapp.clearCache" = "Clear App Data";
+"hostedapp.clearChainGuard" = "Clear ChainGuard Data";
+"hostedapp.importIPA" = "Import IPA";
+"hostedapp.importKm" = "Import";
+"hostedapp.exportKm" = "Export";
+"hostedapp.emptyKm" = "Create New";
+"hostedapp.exportKmPanel.fieldLabel" = "Keymap Name:";
+"hostedapp.delete" = "Uninstall App";
+"hostedapp.deleteConfirm" = "Uninstall";
+"hostedapp.deleteMessage" = "Are you sure you want to uninstall %@?";
+"hostedapp.clearPreferences" = "Clear App Preferences";
+"hostedapp.noSources.title" = "No IPAs Installed";
+"hostedapp.noSources.subtitle" = "You currently have no IPAs installed. Click the button below to import one.";
+
+"ipaLibrary.noNetworkConnection.toast" = "No internet connection!";
+
+"preferences.tab.uninstall" = "Uninstall";
+"preferences.whenUninstalling" = "When uninstalling:";
+"preferences.toggle.showUninstall" = "Show warning popup";
+"preferences.toggle.clearAppData" = "Clear data";
+"preferences.toggle.removeKeymap" = "Remove keymap";
+"preferences.toggle.removeSetting" = "Remove settings";
+"preferences.toggle.removeEntitlements" = "Remove entitlements";
+"preferences.toggle.removeChainGuard" = "Remove ChainGuard";
+"preferences.button.pruneFiles" = "Prune Files";
+"preferences.prune.alert" = "Are you sure you want to prune all files?";
+"preferences.prune.message" = "This will remove all unused files including settings, keymappings, entitlements, and app data";
+"preferences.popover.valid.keymap" = "Name Valid";
+"preferences.popover.malformed.keymap" = "Malformed Name";
+"preferences.popover.duplicate.keymap" = "Duplicate Name";
+
+"sidebar.appLibrary" = "Applications";
+"hostedapp.install.unzip" = "Extracting app from .ipa file...";
+"hostedapp.install.createWrapper" = "Creating app wrapper...";
+"hostedapp.install.installGalgal" = "Installing Galgal...";
+"hostedapp.install.signing" = "Signing app...";
+"hostedapp.install.addToLib" = "Adding app to library...";
+"hostedapp.install.copy" = "Copying app...";
+"hostedapp.progress.finished" = "Finished";
+"hostedapp.progress.failed" = "Failed";
+
+"alert.errorImportKm" = "Error occured when importing keymap!";
+"alert.errorRenameKm" = "Error occured when renaming keymap!";
+"alert.errorKmCreated" = "Error occured when creating keymap!";
+"alert.app.delete" = "All app data will be erased. You may need to download app files again. Do you wish to continue?";
+"alert.app.preferences" = "All in-app preferences will be deleted. Do you wish to continue?";
+"alert.app.clearChainGuard" = "All ChainGuard data will be erased. You may need to login to the app again. Do you wish to continue?";
+"alert.error" = "An error occurred!";
+"alert.success" = "Success";
+"alert.moveAppToApplications.title" = "Move to Applications folder?";
+"alert.moveAppToApplications.subtitle" = "Ophanim must be in the Applications folder to run correctly. Press the button below to move Ophanim automatically.";
+"alert.moveAppToApplications.move" = "Move to Applications folder";
+"alert.legacyImport.subtitle" = "Legacy settings and keymapping files were detected. Would you like to convert these files to the new format?";
+"alert.wrongFileType.title" = "Wrong file type!";
+"alert.wrongFileType.subtitle" = "Ophanim can only install valid .ipa files.";
+"alert.install.injectGalgal" = "Inject Galgal";
+"alert.install.injectGalgalQuestion" = "Do you want to inject Galgal into this application?";
+"alert.install.galgalInformative" = "Galgal is a tool that allows you to bind keys to screen touches, custom display resolutions, and more, but it may break certain apps";
+"alert.supression" = "You can change this in the Ophanim preferences";
+"alert.differentBundleIdKeymap.message" = "The keymap may have been created for another application.";
+"alert.differentBundleIdKeymap.text" = "Are you sure you want to import this keymap?";
+"alert.power.title" = "Low Power Mode Enabled!";
+"alert.power.subtitle" = "Some apps will not work with Low Power Mode enabled. It is recommended to disable it.";
+
+"button.OK" = "OK";
+"button.Proceed" = "Proceed";
+"button.Cancel" = "Cancel";
+"button.Close" = "Close";
+"button.Convert" = "Convert";
+"button.Yes" = "Yes";
+"button.No" = "No";
+"button.Help" = "Help";
+"button.Dismiss" = "Dismiss";
+"button.Enable" = "Enable";
+"button.Reset" = "Reset";
+"button.Unlock" = "Unlock";
+
+"state.enabled" = "Enabled";
+"state.disabled" = "Disabled";
+"state.pendingReboot" = "Pending Reboot";
+
+"error.corruptedIPA" = "This .ipa file is corrupted. It does not contains \"Info.plist\" file.";
+"error.waitInstallation" = "Please wait for the current installation to finish!";
+"error.appEncrypted" = "This app is encrypted! Please use a decrypted IPA. iMazing IPAs are not supported!";
+"error.appCorrupted" = "Something went wrong with this IPA. Please try to use another IPA file.";
+"error.appProhibited" = "Using this app through Ophanim will likely result in a ban!";
+"error.appMaliciousProhibited" = "This App behaves maliciously on Macs, and using it can leave your device in an unbootable state, therefore it is blocked from Ophanim. (Uninstalling...)";
+"error.failedToStripBinary" = "Could not find ARM64 arch in fat binary!";
+
+"settings.title" = "%@ Settings";
+"settings.tab.info" = "Info";
+
+"settings.tab.km" = "Keymaps";
+"settings.toggle.km" = "Keymapping";
+"settings.toggle.km.help" = "Maps keyboard keys to on-screen touches for touch-only apps. Press Command + K to edit the mapping.";
+"settings.slider.mouseSensitivity" = "Mouse sensitivity: %.f";
+"settings.toggle.autoKM" = "Smart Keymap";
+"settings.toggle.autoKM.help" = "Temporarily suspends key mapping whenever the app is accepting text entry.";
+"settings.toggle.enableScrollWheel" = "Enable Scroll Wheel";
+"settings.toggle.enableScrollWheel.help" = "Lets the scroll wheel drive scrolling while key mapping is active.";
+"settings.toggle.disableBuiltinMouse" = "Disable Built-in Mouse Support";
+"settings.toggle.disableBuiltinMouse.help" = "Turns off the app's own mouse handling so it doesn't fight with click mapping.";
+
+"settings.tab.graphics" = "Device";
+"settings.picker.iosDevice" = "iOS device:";
+"settings.picker.adaptiveRes" = "Resolution:";
+"settings.picker.adaptiveRes.help" = "Sets the resolution Ophanim renders the app's window at.";
+"settings.picker.adaptiveRes.0" = "App Default";
+"settings.picker.adaptiveRes.1" = "Auto (Based on Display)";
+"settings.picker.adaptiveRes.5" = "Custom";
+"settings.picker.adaptiveRes.6" = "Resizable";
+"settings.text.customHeight" = "Height";
+"settings.text.customWidth" = "Width";
+"settings.text.detectedResolution" = "Detected Resolution:";
+"settings.picker.aspectRatio" = "Aspect ratio:";
+"settings.picker.aspectRatio.free" = "Free";
+"settings.picker.aspectRatio.custom" = "Custom";
+"settings.picker.windowFix" = "Fix window display issues";
+"settings.picker.windowFix.help" = "Reports swapped width/height to the app, correcting windows that open sideways, off-center, or mis-sized. Unlocks the method picker.";
+"settings.picker.windowFixMethod.0" = "Normal";
+"settings.picker.windowFixMethod.1" = "Alternate";
+"settings.picker.windowFixMethod.help" = "Selects which swap variant is used - switch to Alternate if Normal still mis-sizes the window.";
+"settings.toggle.disableDisplaySleep" = "Disable display sleep";
+"settings.settings.displayRotation" = "Device Orientation";
+"settings.settings.displayRotation.default" = "Default";
+"settings.settings.displayRotation.portrait" = "Portrait";
+"settings.settings.displayRotation.landscapeRight" = "Landscape Right";
+"settings.settings.displayRotation.portraitUpsideDown" = "Portrait Upside Down";
+"settings.settings.displayRotation.flipFix" = "Flip Fix";
+"settings.toggle.disableDisplaySleep.help" = "Keeps the screen awake for as long as this app stays open.";
+"settings.toggle.hideTitleBar" = "Hide titlebar";
+"settings.toggle.floatingWindow" = "Always on top";
+"settings.noGalgal" = "Galgal is not installed in this app";
+"settings.highResolution" = "High resolution may cause crashing";
+"settings.picker.scaler" = "Resolution Scaler";
+
+"settings.tab.bypasses" = "Application";
+"settings.chainGuard.enable" = "Enable ChainGuard";
+"settings.chainGuard.help" = "Routes the app's keychain calls through ChainGuard so it can partly use Apple Keychain Services.";
+"settings.chainGuard.debugging" = "ChainGuard debugging";
+"settings.toggle.introspection" = "Insert Introspection libraries";
+"settings.toggle.introspection.help" = "Loads the system introspection libraries into the app - helps when an app refuses to launch.";
+"settings.toggle.iosFrameworks" = "Force Insert iOS Frameworks";
+"settings.toggle.iosFrameworks.help" = "Forces the system iOS frameworks into the app - helps when an app reports a missing iOS framework.";
+"settings.toggle.checkMicPermissionSync" = "Resolve microphone permission immediately";
+"settings.toggle.checkMicPermissionSync.help" = "Makes the microphone-permission check block until it returns - helps apps that mistakenly see mic access as denied.";
+
+"settings.applicationCategoryType" = "Application Type";
+
+// LSApplicationCategoryType picker labels (localizedName looks up the raw value).
+"public.app-category.none" = "Default (no category)";
+"public.app-category.business" = "Business";
+"public.app-category.developer-tools" = "Developer Tools";
+"public.app-category.education" = "Education";
+"public.app-category.entertainment" = "Entertainment";
+"public.app-category.finance" = "Finance";
+"public.app-category.games" = "Games";
+"public.app-category.graphics-design" = "Graphics & Design";
+"public.app-category.healthcare-fitness" = "Health & Fitness";
+"public.app-category.lifestyle" = "Lifestyle";
+"public.app-category.medical" = "Medical";
+"public.app-category.music" = "Music";
+"public.app-category.news" = "News";
+"public.app-category.photography" = "Photography";
+"public.app-category.productivity" = "Productivity";
+"public.app-category.reference" = "Reference";
+"public.app-category.social-networking" = "Social Networking";
+"public.app-category.sports" = "Sports";
+"public.app-category.travel" = "Travel";
+"public.app-category.utilities" = "Utilities";
+"public.app-category.video" = "Video";
+"public.app-category.weather" = "Weather";
+"settings.removeGalgal" = "Remove Galgal";
+
+"settings.info.displayName" = "Display name:";
+"settings.info.bundleName" = "Bundle name:";
+"settings.info.bundleIdentifier" = "Bundle identifier:";
+"settings.info.bundleVersion" = "Bundle version:";
+"settings.info.executableName" = "Executable name:";
+"settings.info.minimumOSVersion" = "Minimum OS version:";
+"settings.info.galgal" = "Galgal installed:";
+"settings.info.url" = "URL:";
+"settings.info.alias" = "Alias:";
+
+"settings.resetSettings" = "Reset settings";
+"settings.resetKm" = "Reset Keymapping";
+"settings.deleteKm" = "Delete Keymapping";
+"settings.renameKm" = "Rename Keymapping";
+"settings.defaultKm" = "Set Default";
+
+"settings.resetSettingsCompleted" = "Settings have been reverted back to default!";
+"settings.deleteKmFailed" = "Keymap %@ failed to delete";
+
+"notification.appInstalled" = "App installed!";
+"notification.appInstalled.message" = "Check it out in Ophanim!";
+
+"menubar.log.copy" = "Copy Logs";
+"menubar.documentation" = "Documentation";
+"menubar.website" = "Website";
+"menubar.github" = "GitHub";
+"menubar.clearCache" = "Clear Cache";
+"menubar.configSigning" = "Configure Signing";
+
+"soundAlert.messageText" = "Incorrect Audio Settings Detected!";
+"soundAlert.informativeText" = "Your current output device does not have a sample rate of 48 or 44.1 kHz! Crashes may occur. Would you like to change your current output device's sample rate to 48 kHz?";
+"soundAlert.successText" = "Current output device sample rate set to 48 kHz";
+"soundAlert.failureText" = "Failed to set current output device's sample rate to 48 kHz. You can manually set sample rate in the Audio MIDI Setup app";
+
+"settings.toggle.hud" = "Metal HUD";
+"settings.toggle.rootWorkDir" = "Start app at root directory";
+"settings.toggle.rootWorkDir.help" = "Sets the app's working directory to /, matching iOS. Disable it if the app behaves oddly.";
+"settings.toggle.limitMotionUpdateFrequency" = "Limit motion sensor update frequency";
+"settings.toggle.limitMotionUpdateFrequency.help" = "Throttles accelerometer and gyro callbacks to curb high CPU use (common with Unity apps).";
+"settings.toggle.blockSleepSpamming" = "Prevent excessive sleep calls";
+"settings.toggle.blockSleepSpamming.help" = "Suppresses rapid-fire sleep calls that waste CPU and can starve the app of resources.";
+
+// Added tooltips
+"settings.picker.iosDevice.help" = "Chooses the iOS hardware model the app reports as its device.";
+"settings.picker.aspectRatio.help" = "Picks the aspect ratio applied when a fixed resolution is selected.";
+"settings.picker.scaler.help" = "Scales the render resolution up or down - larger values look crisper but cost more.";
+"settings.settings.displayRotation.help" = "Sets the window orientation; choose “Fix flipped” for apps drawn upside-down.";
+"settings.toggle.hideTitleBar.help" = "Drops the window title bar for an edge-to-edge view.";
+"settings.toggle.floatingWindow.help" = "Pins the app's window above your other windows.";
+"settings.chainGuard.debugging.help" = "Prints each ChainGuard keychain read and write to the system log for troubleshooting.";
+"settings.applicationCategoryType.help" = "Writes the macOS app category into Info.plist and re-signs the app. Pick “Games” to allow macOS Game Mode, or “Default” to leave it uncategorized.";
+"settings.slider.mouseSensitivity.help" = "Adjusts how far mapped touches move relative to the mouse.";
+
+"configSigning.header" = "Configure Package Signing";
+"configSigning.subtext" = "Package Signing helps fixing issues with apps that rely on \ncorrect Team IDs for operations like authorization. \nThere may be security risks associated with enabling this feature.\n\n As such, we recommend disabling it when it's not necessary";
+
+"configSigning.info.SIP" = "SIP is required to be fully to partially disabled in order for AMFI to be turned off.";
+"configSigning.info.SIPHeader" = "System Integrity Protection";
+"configSigning.info.AMFI" = "AMFI is required to be turned off in order to allow fake signing of apps, allowing them to run with the correct Team ID";
+"configSigning.info.AMFIHeader" = "Apple Mobile File Integrity";
+"configSigning.action.shutdown" = "Shut down my Mac";
+"configSigning.action.copyCommand" = "Copy Command to Clipboard";
+"configSigning.action.restart" = "Restart my Mac";
+"configSigning.step.disableSIP" = "Please disable SIP from Recovery Mode";
+"configSigning.step.disableAMFI" = "Please disable AMFI";
+"configSigning.step.AMFIreboot" = "AMFI Disabled. Please reboot";
+"configSigning.step.complete" = "Package Signing has been configured successfully";
+
+"configSigning.alert.copied" = "Command Copied!";
+"configSigning.alert.info" = "Please paste and run the command in Terminal.app. Your Mac will reboot after";
+
+"keycover.masterPassword" = "Master Password";
+"keycover.confirmMasterPassword" = "Confirm Master Password";
+"keycover.oldMasterPassword" = "Current Master Password";
+
+"keycover.error.blankPassword" = "Password cannot be blank";
+"keycover.error.notMatch" = "Passwords do not match";
+"keycover.error.incorrectPassword" = "Incorrect Password";
+
+"keycover.status.title" = "KeyCover Status:";
+"keycover.status.managedPassword" = "Enabled with Managed Password";
+"keycover.status.userPassword" = "Enabled with User Password";
+"keycover.status.chainCount" = "KeyCover Chain Status: ";
+"keycover.status.unlockedCount %@ %@" = "%@ unlocked chains in %@ total";
+"keycover.button.lockAll" = "Lock All Chains";
+"keycover.button.changePassword" = "Change Master Password";
+"keycover.toggle.startupPrompt" = "Prompt for KeyCover at startup";
+"keycover.toggle.startupPrompt.help" = "Asks for your KeyCover master password at app launch. Leave it off to be prompted only when starting an app that uses ChainGuard.";
+
+"keycover.setup.useGeneratedKey" = "Managed Automatically";
+"keycover.setup.useUserKey" = "Use my own key";
+"keycover.setup.encryptionKey" = "Encryption Key: ";
+
+"keycover.setupPrompt.title" = "Enter a master password to use for KeyCover";
+"keycover.changePasswordPrompt.title" = "Enter your old master password and a new one to update your KeyCover encryption key";
+
+"keycover.unlockPrompt.title" = "Enter your master password to unlock KeyCover";
+
+"keycover.alert.title" = "Keychain was not unlocked";
+"keycover.alert.content" = "Keychain access has been disabled for the current session";
+
+"keymap.title" = "%@ Keymaps";
+"keymap.title.import" = "Import Keymap Name";
+"keymap.title.rename" = "Rename Keymap Name";
+"keymap.title.empty" = "Create New Keymap";
+"keymap.sheet.name" = "Keymap Name";
+"keymap.default" = "Default";
+
+"alert.quota.limit" = "Quota limit reached. It may take up 24 hours to download this file again";
+"alert.notSpace" = "Not enough space on disk";
+"alert.corrupted" = "File might be corrupted. Try to download it again";
+

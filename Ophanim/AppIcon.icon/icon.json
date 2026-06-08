@@ -1,0 +1,101 @@
+{
+  "fill": {
+    "linear-gradient": [
+      "display-p3:0.05000,0.07000,0.05500,1.00000",
+      "display-p3:0.02000,0.03000,0.02400,1.00000"
+    ],
+    "orientation": {
+      "start": {
+        "x": 0.5,
+        "y": 0.0
+      },
+      "stop": {
+        "x": 0.5,
+        "y": 0.85
+      }
+    }
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "fill": {
+            "linear-gradient": [
+              "display-p3:0.23500,0.87800,0.47800,1.00000",
+              "display-p3:0.12000,0.50000,0.30000,1.00000"
+            ],
+            "orientation": {
+              "start": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "stop": {
+                "x": 0.5,
+                "y": 0.85
+              }
+            }
+          },
+          "glass": true,
+          "hidden": false,
+          "image-name": "rings.svg",
+          "name": "ophanim_wheels",
+          "opacity": 1,
+          "position": {
+            "scale": 0.92,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      }
+    },
+    {
+      "layers": [
+        {
+          "fill": {
+            "linear-gradient": [
+              "display-p3:0.84300,0.69000,1.00000,1.00000",
+              "display-p3:0.70200,0.42400,1.00000,1.00000"
+            ],
+            "orientation": {
+              "start": {
+                "x": 0.5,
+                "y": 0.0
+              },
+              "stop": {
+                "x": 0.5,
+                "y": 0.85
+              }
+            }
+          },
+          "glass": true,
+          "hidden": false,
+          "image-name": "eye.svg",
+          "name": "all_seeing_eye",
+          "opacity": 1,
+          "position": {
+            "scale": 0.92,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.4
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": [
+      "macOS"
+    ]
+  }
+}
