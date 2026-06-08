@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FACE00000000000000000705 /* RulesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000704 /* RulesEditorView.swift */; };
+		FACE00000000000000000703 /* LogViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000702 /* LogViewerView.swift */; };
+		FACE00000000000000000707 /* ReconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000706 /* ReconView.swift */; };
+		FACE00000000000000000701 /* InstrumentationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000700 /* InstrumentationSettings.swift */; };
+		FACE00000000000000000500 /* OPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000400 /* OPEvent.swift */; };
+		FACE00000000000000000501 /* OPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000401 /* OPConfig.swift */; };
+		FACE00000000000000000A01 /* MCPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000A00 /* MCPData.swift */; };
+		FACE00000000000000000A03 /* MCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000A02 /* MCPServer.swift */; };
+		342787552E787EBB003A3C2F /* Keymapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342787542E787EB9003A3C2F /* Keymapping.swift */; };
+		3447B5E52E28B46800FAA22F /* KeymapViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447B5E42E28B46800FAA22F /* KeymapViewVM.swift */; };
+		349915332F8866A3005565D1 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 349915322F8866A3005565D1 /* AppIcon.icon */; };
+		349915352F8866A8005565D1 /* AppIcon.dev.icon in Resources */ = {isa = PBXBuildFile; fileRef = 349915342F8866A8005565D1 /* AppIcon.dev.icon */; };
+		3665EF8928832400007CF915 /* OphanimSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF8828832400007CF915 /* OphanimSettingsView.swift */; };
+		5314D1EE26C402EC00A0A727 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5314D1ED26C402EC00A0A727 /* Shell.swift */; };
+		532644DE26E79E56002EA34D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532644E026E79E56002EA34D /* Localizable.strings */; };
+		53D9DAF326C1849D0071959E /* OphanimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9DAF226C1849D0071959E /* OphanimError.swift */; };
+		53F3802826EB6F6B00D6B525 /* NotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3802726EB6F6B00D6B525 /* NotifyService.swift */; };
+		53F4D2A026C43C690020167C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4D29F26C43C690020167C /* Log.swift */; };
+		53F50C4926E3CA42007AD2D3 /* AppLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F50C4826E3CA42007AD2D3 /* AppLibraryView.swift */; };
+		68E48B952957046D00C39879 /* DownloadManager in Frameworks */ = {isa = PBXBuildFile; productRef = 68E48B942957046D00C39879 /* DownloadManager */; };
+		68E48B9A295708C800C39879 /* Injection in Frameworks */ = {isa = PBXBuildFile; productRef = 68E48B99295708C800C39879 /* Injection */; };
+		68E48B9C295709C000C39879 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E48B9B295709BF00C39879 /* Cacher.swift */; };
+		68E48B9F29570A0400C39879 /* DataCache in Frameworks */ = {isa = PBXBuildFile; productRef = 68E48B9E29570A0400C39879 /* DataCache */; };
+		6E25096F297F5032004D754C /* FileExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E25096E297F5032004D754C /* FileExtensions.swift */; };
+		6E250971297F5281004D754C /* SigningSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E250970297F5281004D754C /* SigningSetupView.swift */; };
+		6E550A8B29BA507200EFC15C /* Macho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E550A8A29BA507200EFC15C /* Macho.swift */; };
+		6E5C68BA289865C8008EC11B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C68B9289865C8008EC11B /* MainView.swift */; };
+		FACE00000000000000000902 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE00000000000000000901 /* Theme.swift */; };
+		6E66B0D528A0039D0099B907 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E66B0D428A0039D0099B907 /* ToastView.swift */; };
+		6E66B0D928A135360099B907 /* ToastVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E66B0D828A135360099B907 /* ToastVM.swift */; };
+		6E7CA16528B4D02900216CD8 /* ITunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7CA16428B4D02900216CD8 /* ITunesResponse.swift */; };
+		6E7CA16728B4EEAE00216CD8 /* KeymapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7CA16628B4EEAE00216CD8 /* KeymapData.swift */; };
+		6EB4B57428C93E0600630890 /* LegacySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB4B57328C93E0600630890 /* LegacySettings.swift */; };
+		6ECB1D0E29798DFA00CD92AA /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB1D0D29798DFA00CD92AA /* DataExtensions.swift */; };
+		6ED6ACA428A949A30040D234 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6ACA328A949A30040D234 /* AppSettingsView.swift */; };
+		6EF893D528F34CD1004AB6D9 /* NetworkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF893D428F34CD1004AB6D9 /* NetworkVM.swift */; };
+		8783CFFB26B8C52D00171041 /* OphanimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783CFFA26B8C52D00171041 /* OphanimApp.swift */; };
+		8783CFFF26B8C52E00171041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8783CFFE26B8C52E00171041 /* Assets.xcassets */; };
+		8783D00226B8C52E00171041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8783D00126B8C52E00171041 /* Preview Assets.xcassets */; };
+		8783D00B26B8C9E600171041 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783D00A26B8C9E600171041 /* URLExtensions.swift */; };
+		923421F7275F40300030CD7D /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923421F6275F40300030CD7D /* AppContainer.swift */; };
+		9272F19E273B74C800DFBEF1 /* AppsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272F19C273B74C800DFBEF1 /* AppsVM.swift */; };
+		9280871B2824A8D20034C510 /* SoundDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280871A2824A8D20034C510 /* SoundDeviceService.swift */; };
+		9286D296273A7E4200958DD3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D295273A7E4200958DD3 /* AppSettings.swift */; };
+		928C01D9272E162C007EB2DF /* InstallVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C01D8272E162C007EB2DF /* InstallVM.swift */; };
+		92A8AAC9275EFEA800D89B50 /* SystemConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8AAC8275EFEA800D89B50 /* SystemConfig.swift */; };
+		92B4D38F2737CF3D0001D7BB /* Galgal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4D38E2737CF3D0001D7BB /* Galgal.swift */; };
+		92ECD8A3274E75CD00DB7AC6 /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECD8A2274E75CD00DB7AC6 /* Installer.swift */; };
+		92ECD8A5274E763700DB7AC6 /* IPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECD8A4274E763700DB7AC6 /* IPA.swift */; };
+		92ECD8AE274E787200DB7AC6 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECD8AD274E787200DB7AC6 /* AppInfo.swift */; };
+		92EE06D0274EA433002C907B /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE06CF274EA433002C907B /* BaseApp.swift */; };
+		92EE06D4274EA604002C907B /* HostedAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE06D3274EA604002C907B /* HostedAppView.swift */; };
+		92EE06DA274EB009002C907B /* HostedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE06D9274EB009002C907B /* HostedApp.swift */; };
+		92EE06DE274EC09F002C907B /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE06DD274EC09F002C907B /* Entitlements.swift */; };
+		92F8500A27675124005CE6BE /* AppIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F8500927675124005CE6BE /* AppIntegrity.swift */; };
+		A25930F42C49E2BC0006C91C /* HostedAppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25930F32C49E2BC0006C91C /* HostedAppVM.swift */; };
+		AA719649287A0E2500623C15 /* default.yaml in Resources */ = {isa = PBXBuildFile; fileRef = AA719647287A0E2500623C15 /* default.yaml */; };
+		AA71964B287A0EA800623C15 /* SandboxRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71964A287A0EA800623C15 /* SandboxRules.swift */; };
+		AA818CB5287ABEC3000BEE9D /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = AA818CB4287ABEC3000BEE9D /* Yams */; };
+		AAE2F78F2F725632001336C9 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2F78E2F72562E001336C9 /* ViewExtensions.swift */; };
+		AB00EB5229A7BF17006F3225 /* KeyCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB00EB5129A7BF17006F3225 /* KeyCover.swift */; };
+		AB6F21EB299B7FA20078ADEC /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F21EA299B7FA20078ADEC /* URLHandler.swift */; };
+		ABBC85B92B7C5CBA00DCF223 /* ModifierKeyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBC85B82B7C5CBA00DCF223 /* ModifierKeyObserver.swift */; };
+		ABDAD80629893CF900DC164F /* KeyCoverSetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD80529893CF900DC164F /* KeyCoverSetupViews.swift */; };
+		ABDAD80A29893EA300DC164F /* KeyCoverSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD80929893EA300DC164F /* KeyCoverSettings.swift */; };
+		ABDAD80C298A1E3E00DC164F /* KeyCoverViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD80B298A1E3E00DC164F /* KeyCoverViews.swift */; };
+		ABED59832887A32F004D782B /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED59822887A32F004D782B /* MenuBarView.swift */; };
+		B1084E1F28AA80F400E399FA /* AppSettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1084E1E28AA80F400E399FA /* AppSettingsVM.swift */; };
+		B1419FB628BA82EE000CB69F /* DiscordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1419FB528BA82EE000CB69F /* DiscordActivity.swift */; };
+		B17FD03C28C70C2100B1D4CA /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17FD03828C70BAE00B1D4CA /* CoreUI.framework */; };
+		B17FD04728C7B0D900B1D4CA /* AssetsExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17FD04628C7B0D900B1D4CA /* AssetsExtractor.swift */; };
+		B44E8CD32C31C50200542038 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = B44E8CD22C31C50200542038 /* SwiftSoup */; };
+		B6603E1128E206A300DEFA3F /* UninstallSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6603E1028E206A300DEFA3F /* UninstallSettings.swift */; };
+		B6603E1328E2257800DEFA3F /* Uninstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6603E1228E2257800DEFA3F /* Uninstaller.swift */; };
+		B67BC7122C39354C00315011 /* UpdateScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BC7112C39354500315011 /* UpdateScheme.swift */; };
+		B67BC7162C3951E700315011 /* KeymapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67BC7152C3951E500315011 /* KeymapView.swift */; };
+		B6825C3528F3D23600E3015A /* InstallSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6825C3428F3D23600E3015A /* InstallSettings.swift */; };
+		B68FD80D2ACB642100683778 /* HostedAppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68FD80C2ACB642100683778 /* HostedAppExtensions.swift */; };
+		B6AB53C929232B4F00039B2E /* KeyCodeNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB53C829232B4F00039B2E /* KeyCodeNames.swift */; };
+		B6ABDA2A2971EEF700A46E80 /* ProgressVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABDA292971EEF700A46E80 /* ProgressVM.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FACE00000000000000000704 /* RulesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RulesEditorView.swift; path = Ophanim/Views/Settings/RulesEditorView.swift; sourceTree = "<group>"; };
+		FACE00000000000000000702 /* LogViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogViewerView.swift; path = Ophanim/Views/Settings/LogViewerView.swift; sourceTree = "<group>"; };
+		FACE00000000000000000706 /* ReconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReconView.swift; path = Ophanim/Views/Settings/ReconView.swift; sourceTree = "<group>"; };
+		FACE00000000000000000700 /* InstrumentationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstrumentationSettings.swift; path = Ophanim/Views/Settings/InstrumentationSettings.swift; sourceTree = "<group>"; };
+		FACE00000000000000000400 /* OPEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OPEvent.swift; path = OphanimCore/OPEvent.swift; sourceTree = "<group>"; };
+		FACE00000000000000000401 /* OPConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OPConfig.swift; path = OphanimCore/OPConfig.swift; sourceTree = "<group>"; };
+		FACE00000000000000000A00 /* MCPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MCPData.swift; path = Ophanim/MCP/MCPData.swift; sourceTree = "<group>"; };
+		FACE00000000000000000A02 /* MCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MCPServer.swift; path = Ophanim/MCP/MCPServer.swift; sourceTree = "<group>"; };
+		342787542E787EB9003A3C2F /* Keymapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keymapping.swift; sourceTree = "<group>"; };
+		3447B5E42E28B46800FAA22F /* KeymapViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeymapViewVM.swift; sourceTree = "<group>"; };
+		349915322F8866A3005565D1 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		349915342F8866A8005565D1 /* AppIcon.dev.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.dev.icon; sourceTree = "<group>"; };
+		3665EF8828832400007CF915 /* OphanimSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OphanimSettingsView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		5314D1ED26C402EC00A0A727 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		532644E126E79E5C002EA34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53468A3E271236A800887A08 /* BaseBoard.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = BaseBoard.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard.tbd; sourceTree = DEVELOPER_DIR; };
+		53468A452712632800887A08 /* Security.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = Security.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Versions/A/Security.tbd; sourceTree = DEVELOPER_DIR; };
+		53468A4A2712917900887A08 /* libmis.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmis.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libmis.tbd; sourceTree = DEVELOPER_DIR; };
+		53841CC926D9D7920021D27C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		53D9DAF226C1849D0071959E /* OphanimError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OphanimError.swift; sourceTree = "<group>"; };
+		53F3802726EB6F6B00D6B525 /* NotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyService.swift; sourceTree = "<group>"; };
+		53F4D29F26C43C690020167C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		53F50C4826E3CA42007AD2D3 /* AppLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryView.swift; sourceTree = "<group>"; };
+		68E48B9B295709BF00C39879 /* Cacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
+		6E25096E297F5032004D754C /* FileExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExtensions.swift; sourceTree = "<group>"; };
+		6E250970297F5281004D754C /* SigningSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningSetupView.swift; sourceTree = "<group>"; };
+		6E550A8A29BA507200EFC15C /* Macho.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macho.swift; sourceTree = "<group>"; };
+		6E5C68B9289865C8008EC11B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FACE00000000000000000901 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6E66B0D428A0039D0099B907 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		6E66B0D828A135360099B907 /* ToastVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastVM.swift; sourceTree = "<group>"; };
+		6E7CA16428B4D02900216CD8 /* ITunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesResponse.swift; sourceTree = "<group>"; };
+		6E7CA16628B4EEAE00216CD8 /* KeymapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeymapData.swift; sourceTree = "<group>"; };
+		6EB4B57328C93E0600630890 /* LegacySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySettings.swift; sourceTree = "<group>"; };
+		6ECB1D0D29798DFA00CD92AA /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		6ED6ACA328A949A30040D234 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
+		6EF893D428F34CD1004AB6D9 /* NetworkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVM.swift; sourceTree = "<group>"; };
+		8783CFF726B8C52D00171041 /* Ophanim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ophanim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8783CFFA26B8C52D00171041 /* OphanimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OphanimApp.swift; sourceTree = "<group>"; };
+		8783CFFE26B8C52E00171041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8783D00126B8C52E00171041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8783D00326B8C52E00171041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8783D00426B8C52E00171041 /* Ophanim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ophanim.entitlements; sourceTree = "<group>"; };
+		8783D00A26B8C9E600171041 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		923421F6275F40300030CD7D /* AppContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		9272F19C273B74C800DFBEF1 /* AppsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsVM.swift; sourceTree = "<group>"; };
+		9280871A2824A8D20034C510 /* SoundDeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDeviceService.swift; sourceTree = "<group>"; };
+		9286D295273A7E4200958DD3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		928C01D7272DF1A2007EB2DF /* Ophanim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ophanim-Bridging-Header.h"; sourceTree = "<group>"; };
+		928C01D8272E162C007EB2DF /* InstallVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallVM.swift; sourceTree = "<group>"; };
+		92A8AAC8275EFEA800D89B50 /* SystemConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConfig.swift; sourceTree = "<group>"; };
+		92B4D38E2737CF3D0001D7BB /* Galgal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galgal.swift; sourceTree = "<group>"; };
+		92D79316273C065A001CC964 /* libsandbox.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsandbox.1.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsandbox.1.tbd; sourceTree = DEVELOPER_DIR; };
+		92ECD8A2274E75CD00DB7AC6 /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
+		92ECD8A4274E763700DB7AC6 /* IPA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPA.swift; sourceTree = "<group>"; };
+		92ECD8AD274E787200DB7AC6 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		92EE06CF274EA433002C907B /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
+		92EE06D3274EA604002C907B /* HostedAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedAppView.swift; sourceTree = "<group>"; };
+		92EE06D9274EB009002C907B /* HostedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedApp.swift; sourceTree = "<group>"; };
+		92EE06DD274EC09F002C907B /* Entitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlements.swift; sourceTree = "<group>"; };
+		92F8500927675124005CE6BE /* AppIntegrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntegrity.swift; sourceTree = "<group>"; };
+		A25930F32C49E2BC0006C91C /* HostedAppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedAppVM.swift; sourceTree = "<group>"; };
+		AA719647287A0E2500623C15 /* default.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = default.yaml; sourceTree = "<group>"; };
+		AA71964A287A0EA800623C15 /* SandboxRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxRules.swift; sourceTree = "<group>"; };
+		AA970FD228793A310099A5D0 /* OphanimRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OphanimRelease.entitlements; sourceTree = "<group>"; };
+		AAE2F78E2F72562E001336C9 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		AB00EB5129A7BF17006F3225 /* KeyCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCover.swift; sourceTree = "<group>"; };
+		AB6F21EA299B7FA20078ADEC /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		ABBC85B82B7C5CBA00DCF223 /* ModifierKeyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierKeyObserver.swift; sourceTree = "<group>"; };
+		ABDAD80529893CF900DC164F /* KeyCoverSetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCoverSetupViews.swift; sourceTree = "<group>"; };
+		ABDAD80929893EA300DC164F /* KeyCoverSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCoverSettings.swift; sourceTree = "<group>"; };
+		ABDAD80B298A1E3E00DC164F /* KeyCoverViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCoverViews.swift; sourceTree = "<group>"; };
+		ABED59822887A32F004D782B /* MenuBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		B1084E1E28AA80F400E399FA /* AppSettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsVM.swift; sourceTree = "<group>"; };
+		B1419FB528BA82EE000CB69F /* DiscordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordActivity.swift; sourceTree = "<group>"; };
+		B17FD03828C70BAE00B1D4CA /* CoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreUI.framework; path = /System/Library/PrivateFrameworks/CoreUI.framework; sourceTree = "<group>"; };
+		B17FD03F28C70C7300B1D4CA /* CoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUI.h; sourceTree = "<group>"; };
+		B17FD04628C7B0D900B1D4CA /* AssetsExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtractor.swift; sourceTree = "<group>"; };
+		B6603E1028E206A300DEFA3F /* UninstallSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallSettings.swift; sourceTree = "<group>"; };
+		B6603E1228E2257800DEFA3F /* Uninstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uninstaller.swift; sourceTree = "<group>"; };
+		B67BC7112C39354500315011 /* UpdateScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScheme.swift; sourceTree = "<group>"; };
+		B67BC7152C3951E500315011 /* KeymapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeymapView.swift; sourceTree = "<group>"; };
+		B6825C3428F3D23600E3015A /* InstallSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallSettings.swift; sourceTree = "<group>"; };
+		B68FD80C2ACB642100683778 /* HostedAppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedAppExtensions.swift; sourceTree = "<group>"; };
+		B6AB53C829232B4F00039B2E /* KeyCodeNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodeNames.swift; sourceTree = "<group>"; };
+		B6ABDA292971EEF700A46E80 /* ProgressVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressVM.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8783CFF426B8C52D00171041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E48B9F29570A0400C39879 /* DataCache in Frameworks */,
+				68E48B9A295708C800C39879 /* Injection in Frameworks */,
+				AA818CB5287ABEC3000BEE9D /* Yams in Frameworks */,
+				B44E8CD32C31C50200542038 /* SwiftSoup in Frameworks */,
+				68E48B952957046D00C39879 /* DownloadManager in Frameworks */,
+				B17FD03C28C70C2100B1D4CA /* CoreUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACE00000000000000000600 /* OphanimCore */ = {
+			isa = PBXGroup;
+			children = (
+				FACE00000000000000000704 /* RulesEditorView.swift */,
+				FACE00000000000000000702 /* LogViewerView.swift */,
+				FACE00000000000000000706 /* ReconView.swift */,
+				FACE00000000000000000700 /* InstrumentationSettings.swift */,
+				FACE00000000000000000400 /* OPEvent.swift */,
+				FACE00000000000000000401 /* OPConfig.swift */,
+				FACE00000000000000000A00 /* MCPData.swift */,
+				FACE00000000000000000A02 /* MCPServer.swift */,
+			);
+			name = OphanimCore;
+			sourceTree = "<group>";
+		};
+		36B26B95288C722500859EFD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3665EF8828832400007CF915 /* OphanimSettingsView.swift */,
+				B6603E1028E206A300DEFA3F /* UninstallSettings.swift */,
+				B6825C3428F3D23600E3015A /* InstallSettings.swift */,
+				ABDAD80929893EA300DC164F /* KeyCoverSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		533F664B26C06A500051CB3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B67BC7152C3951E500315011 /* KeymapView.swift */,
+				8783CFFA26B8C52D00171041 /* OphanimApp.swift */,
+				6E5C68B9289865C8008EC11B /* MainView.swift */,
+				FACE00000000000000000901 /* Theme.swift */,
+				ABED59822887A32F004D782B /* MenuBarView.swift */,
+				6E66B0D428A0039D0099B907 /* ToastView.swift */,
+				6ED6ACA328A949A30040D234 /* AppSettingsView.swift */,
+				6E250970297F5281004D754C /* SigningSetupView.swift */,
+				6E66B0CF289F562A0099B907 /* Sidebar Views */,
+				6E66B0CA289F55180099B907 /* App Views */,
+				36B26B95288C722500859EFD /* Settings */,
+				B6603E1228E2257800DEFA3F /* Uninstaller.swift */,
+				ABDAD80529893CF900DC164F /* KeyCoverSetupViews.swift */,
+				ABDAD80B298A1E3E00DC164F /* KeyCoverViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53841CC826D9D7920021D27C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B17FD03828C70BAE00B1D4CA /* CoreUI.framework */,
+				92D79316273C065A001CC964 /* libsandbox.1.tbd */,
+				53468A4A2712917900887A08 /* libmis.tbd */,
+				53468A452712632800887A08 /* Security.tbd */,
+				53468A3E271236A800887A08 /* BaseBoard.tbd */,
+				53841CC926D9D7920021D27C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53F3802626EB6F5600D6B525 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53F3802726EB6F6B00D6B525 /* NotifyService.swift */,
+				9280871A2824A8D20034C510 /* SoundDeviceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		53F4D29926C43A390020167C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92EE06CF274EA433002C907B /* BaseApp.swift */,
+				92EE06D9274EB009002C907B /* HostedApp.swift */,
+				923421F6275F40300030CD7D /* AppContainer.swift */,
+				92ECD8AD274E787200DB7AC6 /* AppInfo.swift */,
+				9286D295273A7E4200958DD3 /* AppSettings.swift */,
+				B1419FB528BA82EE000CB69F /* DiscordActivity.swift */,
+				AA71964A287A0EA800623C15 /* SandboxRules.swift */,
+				6E7CA16428B4D02900216CD8 /* ITunesResponse.swift */,
+				6E7CA16628B4EEAE00216CD8 /* KeymapData.swift */,
+				B6AB53C829232B4F00039B2E /* KeyCodeNames.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53F5E73B26C1C566005AED1D /* AppInstaller */ = {
+			isa = PBXGroup;
+			children = (
+				92ECD8A2274E75CD00DB7AC6 /* Installer.swift */,
+			);
+			path = AppInstaller;
+			sourceTree = "<group>";
+		};
+		53F5E73E26C1C654005AED1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3447B5E42E28B46800FAA22F /* KeymapViewVM.swift */,
+				B1084E1E28AA80F400E399FA /* AppSettingsVM.swift */,
+				9272F19C273B74C800DFBEF1 /* AppsVM.swift */,
+				6EF893D428F34CD1004AB6D9 /* NetworkVM.swift */,
+				928C01D8272E162C007EB2DF /* InstallVM.swift */,
+				6E66B0D828A135360099B907 /* ToastVM.swift */,
+				53F4D29F26C43C690020167C /* Log.swift */,
+				B6ABDA292971EEF700A46E80 /* ProgressVM.swift */,
+				A25930F32C49E2BC0006C91C /* HostedAppVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		53F5E74126C1D369005AED1D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6E25096D297F4E95004D754C /* Extensions */,
+				342787542E787EB9003A3C2F /* Keymapping.swift */,
+				92ECD8A4274E763700DB7AC6 /* IPA.swift */,
+				92EE06DD274EC09F002C907B /* Entitlements.swift */,
+				5314D1ED26C402EC00A0A727 /* Shell.swift */,
+				92B4D38E2737CF3D0001D7BB /* Galgal.swift */,
+				6E550A8A29BA507200EFC15C /* Macho.swift */,
+				68E48B9B295709BF00C39879 /* Cacher.swift */,
+				92A8AAC8275EFEA800D89B50 /* SystemConfig.swift */,
+				92F8500927675124005CE6BE /* AppIntegrity.swift */,
+				B17FD04628C7B0D900B1D4CA /* AssetsExtractor.swift */,
+				6EB4B57328C93E0600630890 /* LegacySettings.swift */,
+				B17FD03F28C70C7300B1D4CA /* CoreUI.h */,
+				AB00EB5129A7BF17006F3225 /* KeyCover.swift */,
+				AB6F21EA299B7FA20078ADEC /* URLHandler.swift */,
+				ABBC85B82B7C5CBA00DCF223 /* ModifierKeyObserver.swift */,
+				B67BC7112C39354500315011 /* UpdateScheme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6E25096D297F4E95004D754C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2F78E2F72562E001336C9 /* ViewExtensions.swift */,
+				8783D00A26B8C9E600171041 /* URLExtensions.swift */,
+				6ECB1D0D29798DFA00CD92AA /* DataExtensions.swift */,
+				6E25096E297F5032004D754C /* FileExtensions.swift */,
+				B68FD80C2ACB642100683778 /* HostedAppExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E66B0CA289F55180099B907 /* App Views */ = {
+			isa = PBXGroup;
+			children = (
+				92EE06D3274EA604002C907B /* HostedAppView.swift */,
+			);
+			path = "App Views";
+			sourceTree = "<group>";
+		};
+		6E66B0CF289F562A0099B907 /* Sidebar Views */ = {
+			isa = PBXGroup;
+			children = (
+				53F50C4826E3CA42007AD2D3 /* AppLibraryView.swift */,
+			);
+			path = "Sidebar Views";
+			sourceTree = "<group>";
+		};
+		8783CFEE26B8C52D00171041 = {
+			isa = PBXGroup;
+			children = (
+				FACE00000000000000000600 /* OphanimCore */,
+				8783CFF926B8C52D00171041 /* Ophanim */,
+				8783CFF826B8C52D00171041 /* Products */,
+				53841CC826D9D7920021D27C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8783CFF826B8C52D00171041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8783CFF726B8C52D00171041 /* Ophanim.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8783CFF926B8C52D00171041 /* Ophanim */ = {
+			isa = PBXGroup;
+			children = (
+				AA719640287A085200623C15 /* Rules */,
+				AA970FD228793A310099A5D0 /* OphanimRelease.entitlements */,
+				53D9DAF226C1849D0071959E /* OphanimError.swift */,
+				53F3802626EB6F5600D6B525 /* Services */,
+				53F4D29926C43A390020167C /* Model */,
+				53F5E74126C1D369005AED1D /* Utils */,
+				53F5E73E26C1C654005AED1D /* ViewModel */,
+				53F5E73B26C1C566005AED1D /* AppInstaller */,
+				533F664B26C06A500051CB3E /* Views */,
+				8783CFFE26B8C52E00171041 /* Assets.xcassets */,
+				349915322F8866A3005565D1 /* AppIcon.icon */,
+				349915342F8866A8005565D1 /* AppIcon.dev.icon */,
+				8783D00326B8C52E00171041 /* Info.plist */,
+				8783D00426B8C52E00171041 /* Ophanim.entitlements */,
+				8783D00026B8C52E00171041 /* Preview Content */,
+				532644E026E79E56002EA34D /* Localizable.strings */,
+				928C01D7272DF1A2007EB2DF /* Ophanim-Bridging-Header.h */,
+			);
+			path = Ophanim;
+			sourceTree = "<group>";
+		};
+		8783D00026B8C52E00171041 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8783D00126B8C52E00171041 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA719640287A085200623C15 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				AA719647287A0E2500623C15 /* default.yaml */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8783CFF626B8C52D00171041 /* Ophanim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8783D00726B8C52E00171041 /* Build configuration list for PBXNativeTarget "Ophanim" */;
+			buildPhases = (
+				AAE8809C287ACA4900FBB23C /* Carthage Bootstrap */,
+				8783CFF326B8C52D00171041 /* Sources */,
+				8783CFF426B8C52D00171041 /* Frameworks */,
+				8783CFF526B8C52D00171041 /* Resources */,
+				AA818CBC287AC1C6000BEE9D /* Copy Carthage frameworks */,
+				AAC28F222899A05B005057FB /* Codesign frameworks */,
+				36E7AB27288A0B64004C0C3A /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ophanim;
+			packageProductDependencies = (
+				AA818CB4287ABEC3000BEE9D /* Yams */,
+				68E48B942957046D00C39879 /* DownloadManager */,
+				68E48B9E29570A0400C39879 /* DataCache */,
+				68E48B99295708C800C39879 /* Injection */,
+				B44E8CD22C31C50200542038 /* SwiftSoup */,
+			);
+			productName = Ophanim;
+			productReference = 8783CFF726B8C52D00171041 /* Ophanim.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8783CFEF26B8C52D00171041 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					8783CFF626B8C52D00171041 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 8783CFF226B8C52D00171041 /* Build configuration list for PBXProject "Ophanim" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8783CFEE26B8C52D00171041;
+			packageReferences = (
+				AA818CB3287ABEC3000BEE9D /* XCRemoteSwiftPackageReference "Yams" */,
+				68E48B932957046D00C39879 /* XCRemoteSwiftPackageReference "download-manager" */,
+				68E48B9D29570A0400C39879 /* XCRemoteSwiftPackageReference "DataCache" */,
+				68E48B98295708C800C39879 /* XCRemoteSwiftPackageReference "inject" */,
+				B44E8CD12C31C50200542038 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
+			productRefGroup = 8783CFF826B8C52D00171041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8783CFF626B8C52D00171041 /* Ophanim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8783CFF526B8C52D00171041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				349915352F8866A8005565D1 /* AppIcon.dev.icon in Resources */,
+				AA719649287A0E2500623C15 /* default.yaml in Resources */,
+				8783D00226B8C52E00171041 /* Preview Assets.xcassets in Resources */,
+				532644DE26E79E56002EA34D /* Localizable.strings in Resources */,
+				8783CFFF26B8C52E00171041 /* Assets.xcassets in Resources */,
+				349915332F8866A3005565D1 /* AppIcon.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36E7AB27288A0B64004C0C3A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin:/opt/local/bin\"\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed (lint skipped)\"\nfi\n";
+		};
+		AA818CBC287AC1C6000BEE9D /* Copy Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Galgal.xcframework/ios-arm64/Galgal.framework",
+			);
+			name = "Copy Carthage frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Galgal.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "set -euo pipefail\n\necho \"Copying Galgal\"\nrm -rf \"${SCRIPT_OUTPUT_FILE_0}\"\nditto \"${SCRIPT_INPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_0}\"\nAGENT_SRC=\"$(dirname \"${SCRIPT_INPUT_FILE_0}\")/OphanimAgent.dylib\"\nif [ -f \"$AGENT_SRC\" ]; then ditto \"$AGENT_SRC\" \"$(dirname \"${SCRIPT_OUTPUT_FILE_0}\")/OphanimAgent.dylib\"; fi\n\necho \"Handling GalgalInterface files\"\nmkdir -p \"${SCRIPT_OUTPUT_FILE_0}/PlugIns\"\nrm -rf   \"${SCRIPT_OUTPUT_FILE_0}/PlugIns/GalgalInterface.bundle\"\ncp -R    \"${SCRIPT_INPUT_FILE_0}/PlugIns/GalgalInterface.bundle\" \"${SCRIPT_OUTPUT_FILE_0}/PlugIns/GalgalInterface.bundle\"\n\necho \"Converting to maccatalyst\"\nvtool \\\n  -set-build-version maccatalyst 11.0 14.0 \\\n  -replace -output \\\n  \"${SCRIPT_OUTPUT_FILE_0}/Galgal\" \\\n  \"${SCRIPT_OUTPUT_FILE_0}/Galgal\" || true\n\necho \"Rebundling shadow framework to deep framework structure\"\nFRAME=\"${SCRIPT_OUTPUT_FILE_0}\"\nNAME=\"Galgal\"\n\nif [ -d \"$FRAME\" ] && [ ! -d \"$FRAME/Versions\" ]; then\n  echo \"Rebundling $NAME as macOS deep framework…\"\n\n  PARENT=\"$(dirname \"$FRAME\")\"\n  BASENAME=\"$(basename \"$FRAME\")\"\n  TMP=\"$PARENT/.${BASENAME}.rebundle\"\n\n  rm -rf \"$TMP\"\n  mkdir -p \"$TMP/Versions/A/Resources\" \"$TMP/Versions/A/Modules\" \"$TMP/Versions/A/PlugIns\"\n\n  echo \"moving shallow content to tmp A\"\n  [ -f \"$FRAME/$NAME\" ]      && cp -p \"$FRAME/$NAME\"      \"$TMP/Versions/A/$NAME\"\n  [ -d \"$FRAME/Headers\" ]    && cp -Rp \"$FRAME/Headers\"   \"$TMP/Versions/A/Headers\"\n  [ -d \"$FRAME/Modules\" ]    && cp -Rp \"$FRAME/Modules\"   \"$TMP/Versions/A/Modules\"\n  [ -f \"$FRAME/Info.plist\" ] && cp -p \"$FRAME/Info.plist\" \"$TMP/Versions/A/Resources/Info.plist\"\n\n  if [ -d \"$FRAME/Resources\" ]; then\n    ditto \"$FRAME/Resources\" \"$TMP/Versions/A/Resources\"\n  fi\n\n  for lproj in \"$FRAME\"/*.lproj; do\n    cp -Rp \"$lproj\" \"$TMP/Versions/A/Resources\"\n  done\n\n  if [ -d \"$FRAME/PlugIns\" ]; then\n    ditto \"$FRAME/PlugIns\" \"$TMP/Versions/A/PlugIns\"\n  fi\n\n  echo \"symlinking galgal\"\n  ln -s A \"$TMP/Versions/Current\"\n  ln -s Versions/Current/Resources \"$TMP/Resources\"\n  [ -d \"$TMP/Versions/A/Headers\" ] && ln -s Versions/Current/Headers \"$TMP/Headers\"\n  [ -d \"$TMP/Versions/A/Modules\" ] && ln -s Versions/Current/Modules \"$TMP/Modules\"\n  ln -s Versions/Current/$NAME \"$TMP/$NAME\"\n  [ -d \"$TMP/Versions/A/PlugIns\" ] && ln -s Versions/Current/PlugIns \"$TMP/PlugIns\"\n\n  rm -rf \"$FRAME\"\n  mv \"$TMP\" \"$FRAME\"\n\n  echo \"Rebundle done.\"\nfi\n";
+		};
+		AAC28F222899A05B005057FB /* Codesign frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Codesign frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -euo pipefail\n\nIDENTITY=\"${EXPANDED_CODE_SIGN_IDENTITY:--}\";\necho Signing identity $IDENTITY;\n\ncodesign --verbose --force --deep --sign \"$IDENTITY\" ${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Galgal.framework/PlugIns/GalgalInterface.bundle;\ncodesign --verbose --force --deep --sign \"$IDENTITY\" ${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Galgal.framework;\n";
+		};
+		AAE8809C287ACA4900FBB23C /* Carthage Bootstrap */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Bootstrap";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\necho \"Building Galgal runtime…\"\nenv -i PATH=/usr/bin:/bin:/usr/sbin:/sbin HOME=\"$HOME\" bash \"$SRCROOT/Galgal/build-galgal.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8783CFF326B8C52D00171041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE00000000000000000705 /* RulesEditorView.swift in Sources */,
+				FACE00000000000000000703 /* LogViewerView.swift in Sources */,
+				FACE00000000000000000707 /* ReconView.swift in Sources */,
+				FACE00000000000000000701 /* InstrumentationSettings.swift in Sources */,
+				FACE00000000000000000500 /* OPEvent.swift in Sources */,
+				FACE00000000000000000501 /* OPConfig.swift in Sources */,
+				FACE00000000000000000A01 /* MCPData.swift in Sources */,
+				FACE00000000000000000A03 /* MCPServer.swift in Sources */,
+				B67BC7162C3951E700315011 /* KeymapView.swift in Sources */,
+				6E66B0D528A0039D0099B907 /* ToastView.swift in Sources */,
+				92ECD8A3274E75CD00DB7AC6 /* Installer.swift in Sources */,
+				B6825C3528F3D23600E3015A /* InstallSettings.swift in Sources */,
+				92EE06DE274EC09F002C907B /* Entitlements.swift in Sources */,
+				92ECD8A5274E763700DB7AC6 /* IPA.swift in Sources */,
+				92B4D38F2737CF3D0001D7BB /* Galgal.swift in Sources */,
+				3665EF8928832400007CF915 /* OphanimSettingsView.swift in Sources */,
+				9280871B2824A8D20034C510 /* SoundDeviceService.swift in Sources */,
+				A25930F42C49E2BC0006C91C /* HostedAppVM.swift in Sources */,
+				92ECD8AE274E787200DB7AC6 /* AppInfo.swift in Sources */,
+				6E250971297F5281004D754C /* SigningSetupView.swift in Sources */,
+				928C01D9272E162C007EB2DF /* InstallVM.swift in Sources */,
+				6E550A8B29BA507200EFC15C /* Macho.swift in Sources */,
+				6E25096F297F5032004D754C /* FileExtensions.swift in Sources */,
+				53F4D2A026C43C690020167C /* Log.swift in Sources */,
+				B6603E1128E206A300DEFA3F /* UninstallSettings.swift in Sources */,
+				92A8AAC9275EFEA800D89B50 /* SystemConfig.swift in Sources */,
+				B1084E1F28AA80F400E399FA /* AppSettingsVM.swift in Sources */,
+				6E7CA16728B4EEAE00216CD8 /* KeymapData.swift in Sources */,
+				6ED6ACA428A949A30040D234 /* AppSettingsView.swift in Sources */,
+				92EE06DA274EB009002C907B /* HostedApp.swift in Sources */,
+				53F50C4926E3CA42007AD2D3 /* AppLibraryView.swift in Sources */,
+				53F3802826EB6F6B00D6B525 /* NotifyService.swift in Sources */,
+				6E5C68BA289865C8008EC11B /* MainView.swift in Sources */,
+				FACE00000000000000000902 /* Theme.swift in Sources */,
+				3447B5E52E28B46800FAA22F /* KeymapViewVM.swift in Sources */,
+				B1419FB628BA82EE000CB69F /* DiscordActivity.swift in Sources */,
+				B6603E1328E2257800DEFA3F /* Uninstaller.swift in Sources */,
+				B6ABDA2A2971EEF700A46E80 /* ProgressVM.swift in Sources */,
+				AA71964B287A0EA800623C15 /* SandboxRules.swift in Sources */,
+				6ECB1D0E29798DFA00CD92AA /* DataExtensions.swift in Sources */,
+				6E66B0D928A135360099B907 /* ToastVM.swift in Sources */,
+				92EE06D0274EA433002C907B /* BaseApp.swift in Sources */,
+				B67BC7122C39354C00315011 /* UpdateScheme.swift in Sources */,
+				ABBC85B92B7C5CBA00DCF223 /* ModifierKeyObserver.swift in Sources */,
+				92F8500A27675124005CE6BE /* AppIntegrity.swift in Sources */,
+				AAE2F78F2F725632001336C9 /* ViewExtensions.swift in Sources */,
+				342787552E787EBB003A3C2F /* Keymapping.swift in Sources */,
+				ABDAD80A29893EA300DC164F /* KeyCoverSettings.swift in Sources */,
+				8783CFFB26B8C52D00171041 /* OphanimApp.swift in Sources */,
+				AB6F21EB299B7FA20078ADEC /* URLHandler.swift in Sources */,
+				5314D1EE26C402EC00A0A727 /* Shell.swift in Sources */,
+				6E7CA16528B4D02900216CD8 /* ITunesResponse.swift in Sources */,
+				ABDAD80C298A1E3E00DC164F /* KeyCoverViews.swift in Sources */,
+				6EF893D528F34CD1004AB6D9 /* NetworkVM.swift in Sources */,
+				8783D00B26B8C9E600171041 /* URLExtensions.swift in Sources */,
+				6EB4B57428C93E0600630890 /* LegacySettings.swift in Sources */,
+				ABED59832887A32F004D782B /* MenuBarView.swift in Sources */,
+				B6AB53C929232B4F00039B2E /* KeyCodeNames.swift in Sources */,
+				92EE06D4274EA604002C907B /* HostedAppView.swift in Sources */,
+				B17FD04728C7B0D900B1D4CA /* AssetsExtractor.swift in Sources */,
+				ABDAD80629893CF900DC164F /* KeyCoverSetupViews.swift in Sources */,
+				AB00EB5229A7BF17006F3225 /* KeyCover.swift in Sources */,
+				68E48B9C295709C000C39879 /* Cacher.swift in Sources */,
+				53D9DAF326C1849D0071959E /* OphanimError.swift in Sources */,
+				9286D296273A7E4200958DD3 /* AppSettings.swift in Sources */,
+				B68FD80D2ACB642100683778 /* HostedAppExtensions.swift in Sources */,
+				9272F19E273B74C800DFBEF1 /* AppsVM.swift in Sources */,
+				923421F7275F40300030CD7D /* AppContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		532644E026E79E56002EA34D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532644E126E79E5C002EA34D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8783D00626B8C52E00171041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = x86_64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_DOCUMENTATION_COMPILER = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8783D00926B8C52E00171041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUNDLE_ID_SUFFIX = "";
+				CODE_SIGN_ENTITLEMENTS = Ophanim/OphanimRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "Ophanim/Preview\\ Content";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = x86_64;
+				INFOPLIST_FILE = Ophanim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = be.ophanim.Ophanim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Direct be.ophanim.Ophanim macos";
+				RUN_DOCUMENTATION_COMPILER = NO;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
+				SWIFT_OBJC_BRIDGING_HEADER = "./Ophanim/Ophanim-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./Ophanim/Ophanim-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+			};
+			name = Release;
+		};
+		9BFBDA6728C95BA500252EB7 /* Nightly */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = x86_64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_DOCUMENTATION_COMPILER = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Nightly;
+		};
+		9BFBDA6828C95BA500252EB7 /* Nightly */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon${BUNDLE_ID_SUFFIX}";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUNDLE_ID_SUFFIX = .dev;
+				CODE_SIGN_ENTITLEMENTS = Ophanim/OphanimRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "Ophanim/Preview\\ Content";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = x86_64;
+				INFOPLIST_FILE = Ophanim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = be.ophanim.Ophanim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Direct be.ophanim.Ophanim macos";
+				RUN_DOCUMENTATION_COMPILER = NO;
+				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = off;
+				SWIFT_OBJC_BRIDGING_HEADER = "./Ophanim/Ophanim-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./Ophanim/Ophanim-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+			};
+			name = Nightly;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8783CFF226B8C52D00171041 /* Build configuration list for PBXProject "Ophanim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8783D00626B8C52E00171041 /* Release */,
+				9BFBDA6728C95BA500252EB7 /* Nightly */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8783D00726B8C52E00171041 /* Build configuration list for PBXNativeTarget "Ophanim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8783D00926B8C52E00171041 /* Release */,
+				9BFBDA6828C95BA500252EB7 /* Nightly */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68E48B932957046D00C39879 /* XCRemoteSwiftPackageReference "download-manager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shapedbyiris/download-manager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+		68E48B98295708C800C39879 /* XCRemoteSwiftPackageReference "inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paradiseduo/inject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		68E48B9D29570A0400C39879 /* XCRemoteSwiftPackageReference "DataCache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huynguyencong/DataCache";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AA818CB3287ABEC3000BEE9D /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B44E8CD12C31C50200542038 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68E48B942957046D00C39879 /* DownloadManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68E48B932957046D00C39879 /* XCRemoteSwiftPackageReference "download-manager" */;
+			productName = DownloadManager;
+		};
+		68E48B99295708C800C39879 /* Injection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68E48B98295708C800C39879 /* XCRemoteSwiftPackageReference "inject" */;
+			productName = Injection;
+		};
+		68E48B9E29570A0400C39879 /* DataCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68E48B9D29570A0400C39879 /* XCRemoteSwiftPackageReference "DataCache" */;
+			productName = DataCache;
+		};
+		AA818CB4287ABEC3000BEE9D /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA818CB3287ABEC3000BEE9D /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		B44E8CD22C31C50200542038 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B44E8CD12C31C50200542038 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8783CFEF26B8C52D00171041 /* Project object */;
+}
