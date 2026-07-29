@@ -253,13 +253,11 @@ struct LogViewerView: View {
             : nil
     }
 
-    /// Both the hosted app's sandbox container and the optional shared logs dir.
+    /// Ophanim's shared, bundle-id-keyed log dir (current), plus the app's own data container
+    /// (legacy) so logs captured before the shared-dir fix remain visible.
     private func logDirectories() -> [URL] {
-        let home = FileManager.default.homeDirectoryForCurrentUser
-        return [
-            home.appendingPathComponent("Library/Containers/\(bundleID)/Data/Documents/Ophanim"),
-            home.appendingPathComponent("Library/Logs/Ophanim/\(bundleID)")
-        ]
+        [OPPaths.logDirectory(forBundleID: bundleID),
+         OPPaths.legacyLogDirectory(forBundleID: bundleID)]
     }
 
     private func clearLogs() {

@@ -21,8 +21,12 @@ enum MCPData {
     private static func settingsURL(_ bundleID: String) -> URL {
         settingsDir.appendingPathComponent(bundleID).appendingPathExtension("plist")
     }
-    private static func logDir(_ bundleID: String) -> URL {
-        home.appendingPathComponent("Library/Containers/\(bundleID)/Data/Documents/Ophanim")
+    /// Where capture NDJSON lives. The current path is Ophanim's shared container keyed by bundle id
+    /// (`OPPaths.logDirectory`); the legacy path is the app's own data container, kept so logs written
+    /// before the shared-dir fix stay readable. Both are scanned by `events`.
+    private static func logDirs(_ bundleID: String) -> [URL] {
+        [OPPaths.logDirectory(forBundleID: bundleID),
+         OPPaths.legacyLogDirectory(forBundleID: bundleID)]
     }
 
     // MARK: - Apps
@@ -192,24 +196,25 @@ enum MCPData {
 
     /// Load captured events for an app, newest last, optionally filtered, capped to `limit`.
     static func events(_ bundleID: String, category: String?, search: String?, limit: Int) -> [OPEvent] {
-        let dir = logDir(bundleID)
-        guard let files = try? FileManager.default.contentsOfDirectory(
-            at: dir, includingPropertiesForKeys: nil) else { return [] }
         let decoder = JSONDecoder(); decoder.dateDecodingStrategy = .iso8601
         var all: [OPEvent] = []
-        for f in files where f.pathExtension == "ndjson" {
-            guard let text = try? String(contentsOf: f, encoding: .utf8) else { continue }
-            for line in text.split(separator: "\n") {
-                guard let d = line.data(using: .utf8),
-                      let e = try? decoder.decode(OPEvent.self, from: d) else { continue }
-                if let category, e.category.rawValue != category { continue }
-                if let search, !search.isEmpty,
-                   !(e.api.localizedCaseInsensitiveContains(search)
-                     || e.summary.localizedCaseInsensitiveContains(search)
-                     || e.fields.contains { $0.value.localizedCaseInsensitiveContains(search) }) {
-                    continue
+        for dir in logDirs(bundleID) {
+            guard let files = try? FileManager.default.contentsOfDirectory(
+                at: dir, includingPropertiesForKeys: nil) else { continue }
+            for f in files where f.pathExtension == "ndjson" {
+                guard let text = try? String(contentsOf: f, encoding: .utf8) else { continue }
+                for line in text.split(separator: "\n") {
+                    guard let d = line.data(using: .utf8),
+                          let e = try? decoder.decode(OPEvent.self, from: d) else { continue }
+                    if let category, e.category.rawValue != category { continue }
+                    if let search, !search.isEmpty,
+                       !(e.api.localizedCaseInsensitiveContains(search)
+                         || e.summary.localizedCaseInsensitiveContains(search)
+                         || e.fields.contains { $0.value.localizedCaseInsensitiveContains(search) }) {
+                        continue
+                    }
+                    all.append(e)
                 }
-                all.append(e)
             }
         }
         all.sort { $0.timestamp < $1.timestamp }

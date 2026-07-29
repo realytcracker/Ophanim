@@ -172,13 +172,12 @@ public final class OPAgent: @unchecked Sendable {
         config.categories.map { $0.rawValue }.joined(separator: ",")
     }
 
-    /// Always the app's own sandbox container - the only location a sandboxed hosted app can
-    /// reliably write to. (~/Library/Logs/Ophanim is blocked by the sandbox without an sbpl
-    /// exception, so the shared-dir option was removed.) The GUI log viewer reads this path.
+    /// Capture logs go to Ophanim's shared container keyed by bundle id (`OPPaths.logDirectory`),
+    /// NOT the app's own data container. The hosted app's sbpl grant makes that tree writable (the
+    /// agent already reads its settings plist from it), and keying off the bundle id - rather than the
+    /// data-container name, which macOS randomises to a UUID for apps without an application-identifier
+    /// entitlement - lets the GUI/MCP reliably find the logs. The sink creates the directory.
     static func resolveLogDirectory(_ config: OPConfig) -> URL {
-        let docs = (try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-                                                 appropriateFor: nil, create: true))
-            ?? URL(fileURLWithPath: NSTemporaryDirectory())
-        return docs.appendingPathComponent("Ophanim")
+        OPPaths.logDirectory(forBundleID: Bundle.main.bundleIdentifier ?? "")
     }
 }

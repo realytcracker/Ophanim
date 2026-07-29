@@ -287,4 +287,28 @@ public enum OPPaths {
     public static var userHome: URL {
         URL(fileURLWithPath: "/Users/\(NSUserName())")
     }
+
+    /// Ophanim's own app-container root. The hosted app's sandbox profile grants read-write here (the
+    /// agent already loads its settings plist from this tree), and unlike `~/Library/Logs/Ophanim` it
+    /// needs no extra sbpl exception.
+    public static var ophanimContainer: URL {
+        userHome.appendingPathComponent("Library/Containers/be.ophanim.Ophanim")
+    }
+
+    /// Canonical capture-log directory for a hosted app, keyed by its bundle id, under Ophanim's
+    /// container. Both the in-app agent (writer) and the GUI/MCP (readers) resolve logs through here
+    /// so the location does NOT depend on how macOS names the app's *data* container - that name is a
+    /// random UUID for any app lacking an `application-identifier` entitlement (e.g. an ad-hoc
+    /// re-signed app), which is what made capture readback silently return nothing.
+    public static func logDirectory(forBundleID bundleID: String) -> URL {
+        ophanimContainer
+            .appendingPathComponent("Logs")
+            .appendingPathComponent(bundleID.isEmpty ? "unknown" : bundleID)
+    }
+
+    /// Pre-fix log location: the hosted app's own data container. Only correct for apps whose data
+    /// container is bundle-id-named, but still read so logs captured before the fix stay visible.
+    public static func legacyLogDirectory(forBundleID bundleID: String) -> URL {
+        userHome.appendingPathComponent("Library/Containers/\(bundleID)/Data/Documents/Ophanim")
+    }
 }
