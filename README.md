@@ -124,7 +124,10 @@ Ophanim is created and maintained by **ytcracker** and **clord**.
 
 ## Acknowledgments
 
-Built with these open-source components:
+Ophanim's app shell, iOS-app-as-Mac-Catalyst hosting model, and injected runtime (Galgal) were inspired
+by [**PlayCover**](https://github.com/PlayCover/PlayCover) and its PlayTools runtime (GPLv3).
+
+Also built with these open-source components:
 
 - [inject](https://github.com/paradiseduo/inject) - Mach-O load-command injection.
 - [PTFakeTouch](https://github.com/Ret70/PTFakeTouch) - synthetic touch events (vendored in the runtime).

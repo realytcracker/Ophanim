@@ -75,7 +75,6 @@
 		ABDAD80C298A1E3E00DC164F /* KeyCoverViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD80B298A1E3E00DC164F /* KeyCoverViews.swift */; };
 		ABED59832887A32F004D782B /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED59822887A32F004D782B /* MenuBarView.swift */; };
 		B1084E1F28AA80F400E399FA /* AppSettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1084E1E28AA80F400E399FA /* AppSettingsVM.swift */; };
-		B1419FB628BA82EE000CB69F /* DiscordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1419FB528BA82EE000CB69F /* DiscordActivity.swift */; };
 		B17FD03C28C70C2100B1D4CA /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17FD03828C70BAE00B1D4CA /* CoreUI.framework */; };
 		B17FD04728C7B0D900B1D4CA /* AssetsExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17FD04628C7B0D900B1D4CA /* AssetsExtractor.swift */; };
 		B44E8CD32C31C50200542038 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = B44E8CD22C31C50200542038 /* SwiftSoup */; };
@@ -164,7 +163,6 @@
 		ABDAD80B298A1E3E00DC164F /* KeyCoverViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCoverViews.swift; sourceTree = "<group>"; };
 		ABED59822887A32F004D782B /* MenuBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		B1084E1E28AA80F400E399FA /* AppSettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsVM.swift; sourceTree = "<group>"; };
-		B1419FB528BA82EE000CB69F /* DiscordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordActivity.swift; sourceTree = "<group>"; };
 		B17FD03828C70BAE00B1D4CA /* CoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreUI.framework; path = /System/Library/PrivateFrameworks/CoreUI.framework; sourceTree = "<group>"; };
 		B17FD03F28C70C7300B1D4CA /* CoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUI.h; sourceTree = "<group>"; };
 		B17FD04628C7B0D900B1D4CA /* AssetsExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsExtractor.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 				923421F6275F40300030CD7D /* AppContainer.swift */,
 				92ECD8AD274E787200DB7AC6 /* AppInfo.swift */,
 				9286D295273A7E4200958DD3 /* AppSettings.swift */,
-				B1419FB528BA82EE000CB69F /* DiscordActivity.swift */,
 				AA71964A287A0EA800623C15 /* SandboxRules.swift */,
 				6E7CA16428B4D02900216CD8 /* ITunesResponse.swift */,
 				6E7CA16628B4EEAE00216CD8 /* KeymapData.swift */,
@@ -623,7 +620,6 @@
 				6E5C68BA289865C8008EC11B /* MainView.swift in Sources */,
 				FACE00000000000000000902 /* Theme.swift in Sources */,
 				3447B5E52E28B46800FAA22F /* KeymapViewVM.swift in Sources */,
-				B1419FB628BA82EE000CB69F /* DiscordActivity.swift in Sources */,
 				B6603E1328E2257800DEFA3F /* Uninstaller.swift in Sources */,
 				B6ABDA2A2971EEF700A46E80 /* ProgressVM.swift in Sources */,
 				AA71964B287A0EA800623C15 /* SandboxRules.swift in Sources */,

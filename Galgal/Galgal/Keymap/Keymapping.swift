@@ -123,7 +123,7 @@ class Keymapping {
 
             if !keymapOrder.keys.contains(path) {
                 keymapConfig.keymapOrder.append(path)
-                keymapOrder[path] = getKeymap(path: path)
+                keymapOrder[path] = map
             }
         } catch {
             print("[Galgal] Keymapping encode failed.\n%@")
@@ -140,17 +140,25 @@ class Keymapping {
 
     @discardableResult
     public func resetKeymap(path: URL) -> KeymappingData {
-        setKeymap(path: path, map: KeymappingData(bundleIdentifier: bundleIdentifier))
-        return getKeymap(path: path)
+        // Return the freshly-built map directly rather than re-reading via getKeymap(): if the write
+        // in setKeymap failed (e.g. the path isn't writable), getKeymap would decode-fail and call
+        // resetKeymap again, recursing until the stack overflows. Degrade gracefully instead.
+        let map = KeymappingData(bundleIdentifier: bundleIdentifier)
+        setKeymap(path: path, map: map)
+        return map
     }
 
     @discardableResult
     private func resetConfig() -> KeymapConfig {
         let defaultURL = constructKeymapPath(name: "default")
 
-        keymapConfig = KeymapConfig(defaultKm: defaultURL, keymapOrder: [defaultURL])
+        let config = KeymapConfig(defaultKm: defaultURL, keymapOrder: [defaultURL])
+        // Persist best-effort, but return the in-memory value directly. Re-reading through the
+        // `keymapConfig` getter here would re-enter resetConfig() on any read failure (e.g. the
+        // config dir isn't writable), recursing until the stack overflows. Degrade gracefully.
+        keymapConfig = config
 
-        return keymapConfig
+        return config
     }
 
 }

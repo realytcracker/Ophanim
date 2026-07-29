@@ -40,4 +40,6 @@ cp -R "$PLUGIN_SRC" "$STAGE/Galgal.framework/PlugIns/GalgalInterface.bundle"
 echo "✓ Staged → $STAGE/Galgal.framework (iOS-arm64; app build retags to maccatalyst)"
 
 # Build + stage the sibling-injection agent dylib alongside the framework (same $STAGE dir).
-bash "$(dirname "$0")/build-agent.sh"
+# CWD is the Galgal dir here (cd'd above), so invoke the sibling script by its plain name - deriving
+# it from $0 again would double the "Galgal/" prefix and miss the file.
+bash build-agent.sh

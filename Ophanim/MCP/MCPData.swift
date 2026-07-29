@@ -128,6 +128,26 @@ enum MCPData {
 
     static func config(_ bundleID: String) -> OPConfig? { appSettings(bundleID)?.ophanim }
 
+    /// Full view of an app's config, grouped so it is not a verbatim dump of the flat settings
+    /// struct: `instrumentation` is the OphanimCore engine config; `hosting` is everything else
+    /// (jailbreak bypass, keychain emulation, reported device model, and the window/graphics/input
+    /// options). Nothing is hidden - an MCP client can read every field the app persists.
+    static func configProjection(_ bundleID: String) -> [String: Any]? {
+        guard let s = appSettings(bundleID) else { return nil }
+        func asDict<T: Encodable>(_ value: T) -> [String: Any] {
+            (try? JSONEncoder().encode(value))
+                .flatMap { try? JSONSerialization.jsonObject(with: $0) as? [String: Any] } ?? [:]
+        }
+        var hosting = asDict(s)
+        hosting["ophanim"] = nil            // surfaced separately as `instrumentation`
+        hosting["bundleIdentifier"] = nil   // surfaced as top-level `bundleID`
+        return [
+            "bundleID": bundleID.isEmpty ? s.bundleIdentifier : bundleID,
+            "instrumentation": asDict(s.ophanim),
+            "hosting": hosting
+        ]
+    }
+
     /// Mutate the full per-app settings and persist them. A running app picks the change up live via
     /// the agent's config-file poll (categories/rules/sinks/pinning); newly added hooks and the
     /// injection strategy apply on next launch.

@@ -218,9 +218,8 @@ final class MCPServer {
 
         case "get_config":
             guard let bid = args["bundleID"] as? String, !bid.isEmpty else { throw bail("bundleID is required") }
-            guard let settings = MCPData.appSettings(bid) else { throw bail("no settings found for \(bid)") }
-            let data = try JSONEncoder().encode(settings)
-            return String(data: data, encoding: .utf8) ?? "{}"
+            guard let projection = MCPData.configProjection(bid) else { throw bail("no settings found for \(bid)") }
+            return try json(projection)
 
         case "list_jailbreak_detectors":
             let dets = JBBypassCatalog.all.map { ["id": $0.id, "label": $0.label] }
@@ -259,23 +258,37 @@ final class MCPServer {
                 // Keychain emulation
                 if let on = args["chainGuard"] as? Bool { s.chainGuard = on }
                 if let on = args["chainGuardDebugging"] as? Bool { s.chainGuardDebugging = on }
-                // Window / display (per-app)
-                if let on = args["alwaysOnTop"] as? Bool { s.floatingWindow = on }
+                // Device model the app reports (relevant to how it fingerprints its environment)
+                if let model = args["iosDeviceModel"] as? String { s.iosDeviceModel = model }
+                // Hosting: window / display / graphics / input - full parity with the app's settings.
                 if let on = args["disableDisplaySleep"] as? Bool { s.disableTimeout = on }
+                if let on = args["keymapping"] as? Bool { s.keymapping = on }
+                if let v = args["sensitivity"] as? Double { s.sensitivity = Float(v) }
+                if let on = args["alwaysOnTop"] as? Bool { s.floatingWindow = on }
                 if let on = args["hideTitleBar"] as? Bool { s.hideTitleBar = on }
-                // Compatibility
                 if let on = args["rootWorkDir"] as? Bool { s.rootWorkDir = on }
                 if let on = args["limitMotionUpdateFrequency"] as? Bool { s.limitMotionUpdateFrequency = on }
                 if let on = args["blockSleepSpamming"] as? Bool { s.blockSleepSpamming = on }
                 if let on = args["checkMicPermissionSync"] as? Bool { s.checkMicPermissionSync = on }
-                // Input
-                if let on = args["keymapping"] as? Bool { s.keymapping = on }
-                // Device
-                if let model = args["iosDeviceModel"] as? String { s.iosDeviceModel = model }
+                if let on = args["noKMOnInput"] as? Bool { s.noKMOnInput = on }
+                if let on = args["enableScrollWheel"] as? Bool { s.enableScrollWheel = on }
+                if let on = args["disableBuiltinMouse"] as? Bool { s.disableBuiltinMouse = on }
+                if let on = args["metalHUD"] as? Bool { s.metalHUD = on }
+                if let on = args["notch"] as? Bool { s.notch = on }
+                if let on = args["inverseScreenValues"] as? Bool { s.inverseScreenValues = on }
+                if let v = args["displayRotation"] as? Int { s.displayRotation = v }
+                if let v = args["windowWidth"] as? Int { s.windowWidth = v }
+                if let v = args["windowHeight"] as? Int { s.windowHeight = v }
+                if let v = args["customScaler"] as? Double { s.customScaler = v }
+                if let v = args["resolution"] as? Int { s.resolution = v }
+                if let v = args["aspectRatio"] as? Int { s.aspectRatio = v }
+                if let v = args["windowFixMethod"] as? Int { s.windowFixMethod = v }
+                if let v = args["resizableAspectRatioType"] as? Int { s.resizableAspectRatioType = v }
+                if let v = args["resizableAspectRatioWidth"] as? Int { s.resizableAspectRatioWidth = v }
+                if let v = args["resizableAspectRatioHeight"] as? Int { s.resizableAspectRatioHeight = v }
             }
-            let settings = MCPData.appSettings(bid)
-            let data = try JSONEncoder().encode(settings)
-            return "Updated. New settings:\n" + (String(data: data, encoding: .utf8) ?? "{}")
+            let body = MCPData.configProjection(bid).flatMap { try? json($0) } ?? "{}"
+            return "Updated. New config:\n" + body
 
         case "launch_app":
             guard let bid = args["bundleID"] as? String, !bid.isEmpty else { throw bail("bundleID is required") }
@@ -421,9 +434,11 @@ final class MCPServer {
         ],
         [
             "name": "get_config",
-            "description": "Read the full per-app settings as JSON - instrumentation (enabled, capture "
-                + "categories, sinks, rules, bypassPinning, injection strategy) plus jailbreak bypasses, "
-                + "ChainGuard, and window/graphics/compatibility options.",
+            "description": "Read an app's full per-app config as JSON, grouped into `instrumentation` "
+                + "(the engine: enabled, capture categories, sinks, rules, bypassPinning, injection "
+                + "strategy) and `hosting` (everything else the app persists: jailbreak bypasses, "
+                + "ChainGuard/keychain emulation, reported iOS device model, and window/graphics/input "
+                + "options). Mirrors what set_config can write.",
             "inputSchema": [
                 "type": "object",
                 "properties": ["bundleID": ["type": "string", "description": "The app's bundle identifier."]],
@@ -555,15 +570,32 @@ final class MCPServer {
                     ],
                     "chainGuard": ["type": "boolean", "description": "Route keychain calls through ChainGuard (emulated keychain)."],
                     "chainGuardDebugging": ["type": "boolean", "description": "Log each ChainGuard keychain read/write."],
+                    "iosDeviceModel": ["type": "string", "description": "iOS hardware model the app reports (e.g. iPad13,8)."],
+                    "disableDisplaySleep": ["type": "boolean", "description": "Hold a no-display-sleep assertion while the app runs (useful for long capture sessions)."],
+                    "keymapping": ["type": "boolean", "description": "Enable keyboard-to-touch key mapping."],
+                    "sensitivity": ["type": "number", "description": "Mouse/camera-control sensitivity (0-100)."],
                     "alwaysOnTop": ["type": "boolean", "description": "Keep the app's window above other windows."],
-                    "disableDisplaySleep": ["type": "boolean", "description": "Hold a no-display-sleep assertion while the app runs."],
                     "hideTitleBar": ["type": "boolean", "description": "Hide the app window's title bar."],
                     "rootWorkDir": ["type": "boolean", "description": "Start the app with its working directory at /."],
                     "limitMotionUpdateFrequency": ["type": "boolean", "description": "Throttle accelerometer/gyro callbacks."],
                     "blockSleepSpamming": ["type": "boolean", "description": "Suppress rapid-fire sleep calls."],
                     "checkMicPermissionSync": ["type": "boolean", "description": "Resolve the microphone-permission check synchronously."],
-                    "keymapping": ["type": "boolean", "description": "Enable keyboard-to-touch key mapping."],
-                    "iosDeviceModel": ["type": "string", "description": "iOS hardware model the app reports (e.g. iPad13,8)."]
+                    "noKMOnInput": ["type": "boolean", "description": "Suspend key mapping while a text field is focused."],
+                    "enableScrollWheel": ["type": "boolean", "description": "Forward scroll-wheel events to the app."],
+                    "disableBuiltinMouse": ["type": "boolean", "description": "Ignore the built-in trackpad for mouse control."],
+                    "metalHUD": ["type": "boolean", "description": "Show the Metal performance HUD."],
+                    "notch": ["type": "boolean", "description": "Report a display notch (safe-area inset)."],
+                    "inverseScreenValues": ["type": "boolean", "description": "Invert screen coordinate mapping."],
+                    "displayRotation": ["type": "integer", "description": "Display rotation mode."],
+                    "windowWidth": ["type": "integer", "description": "Hosted window width in points."],
+                    "windowHeight": ["type": "integer", "description": "Hosted window height in points."],
+                    "customScaler": ["type": "number", "description": "Custom resolution scale factor."],
+                    "resolution": ["type": "integer", "description": "Resolution preset index (0 = off; 6 = resizable)."],
+                    "aspectRatio": ["type": "integer", "description": "Aspect-ratio preset index."],
+                    "windowFixMethod": ["type": "integer", "description": "Window-sizing fix strategy index."],
+                    "resizableAspectRatioType": ["type": "integer", "description": "Resizable aspect-ratio lock type."],
+                    "resizableAspectRatioWidth": ["type": "integer", "description": "Locked aspect-ratio width component."],
+                    "resizableAspectRatioHeight": ["type": "integer", "description": "Locked aspect-ratio height component."]
                 ],
                 "required": ["bundleID"]
             ]

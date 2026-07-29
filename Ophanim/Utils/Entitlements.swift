@@ -93,10 +93,6 @@ class Entitlements {
             }
         }
 
-        if app.settings.settings.discordActivity.enable {
-             rules.allow?.append("(allow network* ipc-posix*)")
-         }
-
         sandboxProfile.append(contentsOf: SandboxRules.buildRules(rules: rules.allow ?? [], bundleID: bundleID))
         sandboxProfile.append("(deny process-fork)")
         for file in critical {

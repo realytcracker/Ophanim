@@ -26,7 +26,6 @@ struct AppSettingsData: Codable {
     var bypass = false
     /// Per-detector jailbreak-bypass allowlist (ObjC class names from JBBypassCatalog). Empty = none.
     var jailbreakBypasses: [String] = []
-    var discordActivity = DiscordActivity()
     var version = "3.0.0"
     var chainGuard = true
     var chainGuardDebugging = false
@@ -41,7 +40,6 @@ struct AppSettingsData: Codable {
         }
     }
     var windowFixMethod = 0
-    var injectIntrospection = false
     var rootWorkDir = true
     var noKMOnInput = true
     var enableScrollWheel = true
@@ -78,15 +76,12 @@ struct AppSettingsData: Codable {
         notch = try container.decodeIfPresent(Bool.self, forKey: .notch) ?? NSScreen.hasNotch()
         bypass = try container.decodeIfPresent(Bool.self, forKey: .bypass) ?? false
         jailbreakBypasses = try container.decodeIfPresent([String].self, forKey: .jailbreakBypasses) ?? []
-        discordActivity = try container.decodeIfPresent(DiscordActivity.self,
-                                                        forKey: .discordActivity) ?? DiscordActivity()
         version = try container.decodeIfPresent(String.self, forKey: .version) ?? "3.0.0"
         chainGuard = try container.decodeIfPresent(Bool.self, forKey: .chainGuard) ?? true
         chainGuardDebugging = try container.decodeIfPresent(Bool.self, forKey: .chainGuardDebugging) ?? false
         inverseScreenValues = try container.decodeIfPresent(Bool.self, forKey: .inverseScreenValues) ?? false
         metalHUD = try container.decodeIfPresent(Bool.self, forKey: .metalHUD) ?? false
         windowFixMethod = try container.decodeIfPresent(Int.self, forKey: .windowFixMethod) ?? 0
-        injectIntrospection = try container.decodeIfPresent(Bool.self, forKey: .injectIntrospection) ?? false
         rootWorkDir = try container.decodeIfPresent(Bool.self, forKey: .rootWorkDir) ?? true
         noKMOnInput = try container.decodeIfPresent(Bool.self, forKey: .noKMOnInput) ?? true
         enableScrollWheel = try container.decodeIfPresent(Bool.self, forKey: .enableScrollWheel) ?? true
