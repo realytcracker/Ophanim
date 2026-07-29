@@ -97,7 +97,14 @@ struct LogViewerView: View {
     }
 
     private static func signature(_ e: OPEvent) -> String {
-        "\(e.category.rawValue)|\(e.api)|\(e.fields["path"] ?? e.fields["host"] ?? e.fields["account"] ?? "")|\(e.disposition.rawValue)"
+        // Dedupe key. Include EVERY identity field present ("what was touched"), not just the first of
+        // path/host/account - otherwise events differing only in another identity field (a URL scheme,
+        // a hook target, a port, a keychain service) collapse into one row. Volatile / outcome fields
+        // (bytes, status, result, response headers, raw register args x0-x3) are deliberately excluded
+        // so genuine repeats of the same call still merge.
+        let idKeys = ["path", "host", "port", "url", "account", "service", "target", "label"]
+        let id = idKeys.compactMap { k in e.fields[k].map { "\(k)=\($0)" } }.joined(separator: "&")
+        return "\(e.category.rawValue)|\(e.api)|\(id)|\(e.disposition.rawValue)"
     }
 
     /// Highest ring-drop total reported in the current events (0 if none).
