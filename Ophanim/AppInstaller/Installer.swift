@@ -45,12 +45,16 @@ class Installer {
     }
 
     // swiftlint:disable:next function_body_length
-    static func install(ipaUrl: URL, export: Bool, returnCompletion: @escaping (URL?) -> Void) {
+    static func install(ipaUrl: URL, export: Bool, injectGalgal: Bool? = nil,
+                        returnCompletion: @escaping (URL?) -> Void) {
         // If (the option key is held or the install galgal popup settings is true) and its not an export,
-        //    then show the installer dialog
+        //    then show the installer dialog. A non-nil injectGalgal (e.g. from the MCP server, which has
+        //    no UI) forces the decision and skips the modal prompt.
         let installGalgal: Bool
 
-        if (ModifierKeyObserver.shared.isOptionKeyPressed
+        if let injectGalgal {
+            installGalgal = injectGalgal
+        } else if (ModifierKeyObserver.shared.isOptionKeyPressed
                 || InstallPreferences.shared.showInstallPopup) && !export {
             installGalgal = installGalgalPopup()
         } else {

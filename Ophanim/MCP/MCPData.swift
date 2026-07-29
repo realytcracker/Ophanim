@@ -99,6 +99,29 @@ enum MCPData {
         return FileManager.default.fileExists(atPath: url.path) ? url : nil
     }
 
+    /// Uninstall a hosted app: remove its bundle and per-app config (settings, keymap, entitlements,
+    /// ChainGuard) - the same set the GUI's uninstall clears. When `purgeData` is true, also delete
+    /// the app's OS data container (its captured event logs live there). Returns the paths removed.
+    @discardableResult
+    static func uninstall(_ bundleID: String, purgeData: Bool) -> [String] {
+        let fm = FileManager.default
+        var targets: [URL] = [
+            appsDir.appendingPathComponent(bundleID).appendingPathExtension("app"),
+            settingsURL(bundleID),
+            container.appendingPathComponent("Keymapping").appendingPathComponent(bundleID),
+            container.appendingPathComponent("Entitlements").appendingPathComponent(bundleID).appendingPathExtension("plist"),
+            container.appendingPathComponent("ChainGuard").appendingPathComponent(bundleID)
+        ]
+        if purgeData {
+            targets.append(home.appendingPathComponent("Library/Containers/\(bundleID)"))
+        }
+        var removed: [String] = []
+        for target in targets where fm.fileExists(atPath: target.path) {
+            if (try? fm.removeItem(at: target)) != nil { removed.append(target.path) }
+        }
+        return removed
+    }
+
     static func listApps() -> [AppEntry] {
         guard let dirs = try? FileManager.default.contentsOfDirectory(
             at: appsDir, includingPropertiesForKeys: nil) else { return [] }

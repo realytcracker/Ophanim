@@ -307,6 +307,39 @@ final class MCPServer {
             throw bail("launch is not supported in this build")
             #endif
 
+        case "install_app":
+            guard let path = args["ipaPath"] as? String, !path.isEmpty else { throw bail("ipaPath is required") }
+            let ipaURL = URL(fileURLWithPath: (path as NSString).expandingTildeInPath).standardizedFileURL
+            guard FileManager.default.fileExists(atPath: ipaURL.path) else { throw bail("no file at \(ipaURL.path)") }
+            guard ipaURL.pathExtension.lowercased() == "ipa" else {
+                throw bail("expected an .ipa file, got \(ipaURL.lastPathComponent)")
+            }
+            #if canImport(AppKit)
+            // Run the same importer the GUI uses, forcing Galgal injection (no modal prompt), and block
+            // until it completes. Install is a long, one-shot operation, so allow generous headroom.
+            let sema = DispatchSemaphore(value: 0)
+            var installed: URL?
+            Installer.install(ipaUrl: ipaURL, export: false, injectGalgal: true) { url in
+                installed = url
+                sema.signal()
+            }
+            guard sema.wait(timeout: .now() + 600) == .success else { throw bail("install timed out") }
+            guard let appURL = installed else { throw bail("install failed - see the Ophanim log for details") }
+            let info = (try? Data(contentsOf: appURL.appendingPathComponent("Info.plist")))
+                .flatMap { try? PropertyListSerialization.propertyList(from: $0, format: nil) as? [String: Any] } ?? [:]
+            let bid = (info["CFBundleIdentifier"] as? String) ?? appURL.deletingPathExtension().lastPathComponent
+            return "Installed \(bid) from \(ipaURL.lastPathComponent). Configure it with set_config, then run launch_app."
+            #else
+            throw bail("install is not supported in this build")
+            #endif
+
+        case "uninstall_app":
+            guard let bid = args["bundleID"] as? String, !bid.isEmpty else { throw bail("bundleID is required") }
+            guard MCPData.appURL(bid) != nil else { throw bail("app not installed: \(bid)") }
+            let purge = (args["purgeData"] as? Bool) ?? false
+            let removed = MCPData.uninstall(bid, purgeData: purge)
+            return try json(["bundleID": bid, "removed": removed, "purgedData": purge, "count": removed.count])
+
         default:
             throw bail("unknown tool: \(name)")
         }
@@ -606,6 +639,35 @@ final class MCPServer {
             "inputSchema": [
                 "type": "object",
                 "properties": ["bundleID": ["type": "string", "description": "The app's bundle identifier."]],
+                "required": ["bundleID"]
+            ]
+        ],
+        [
+            "name": "install_app",
+            "description": "Install (import) an iOS .ipa as a hosted app - the same flow as dropping an "
+                + ".ipa into the Ophanim window: unpack it, convert the Mach-O to Mac Catalyst, re-sign "
+                + "it, inject the Galgal runtime + instrumentation engine, and register it. Galgal is "
+                + "always injected (no prompt). After it returns, configure with set_config and run with "
+                + "launch_app. Returns the installed bundle id.",
+            "inputSchema": [
+                "type": "object",
+                "properties": [
+                    "ipaPath": ["type": "string", "description": "Filesystem path to the .ipa to install (a leading ~ is expanded)."]
+                ],
+                "required": ["ipaPath"]
+            ]
+        ],
+        [
+            "name": "uninstall_app",
+            "description": "Uninstall a hosted app: remove its bundle and per-app config (settings, "
+                + "keymap, entitlements, ChainGuard) - the set the GUI's uninstall clears. The app's data "
+                + "container, including its captured event logs, is preserved unless purgeData is true.",
+            "inputSchema": [
+                "type": "object",
+                "properties": [
+                    "bundleID": ["type": "string", "description": "The app's bundle identifier."],
+                    "purgeData": ["type": "boolean", "description": "Also delete the app's data container (its captured event logs). Default false."]
+                ],
                 "required": ["bundleID"]
             ]
         ]
