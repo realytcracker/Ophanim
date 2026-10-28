@@ -30,6 +30,7 @@ DEST="$HOME/Applications/Ophanim.app"
 mkdir -p "$(dirname "$DEST")"
 rm -rf "$DEST"
 ditto "$APP" "$DEST"
+chmod +x "$DEST/Contents/MacOS/"*   # some copy paths drop the exec bit; dyld needs it
 codesign --force --deep --sign - "$DEST"
 codesign --verify --deep --strict "$DEST"
 echo "✓ Ophanim.app ready → $DEST"

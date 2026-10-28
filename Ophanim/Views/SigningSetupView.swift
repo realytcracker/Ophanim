@@ -118,7 +118,7 @@ struct SignSetupView: View {
             Divider()
             HStack {
                 Button("button.Help") {
-                    if let url = URL(string: "https://docs.ophanim.io/getting_started/troubleshoot_login") {
+                    if let url = URL(string: "https://ophanim.be/docs") {
                         NSWorkspace.shared.open(url)
                     }
                 }

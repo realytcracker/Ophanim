@@ -26,18 +26,18 @@ struct OphanimHelpMenuView: Commands {
     var body: some Commands {
         CommandGroup(replacing: .help) {
             Button("menubar.documentation", systemImage: "document.fill") {
-                if let url = URL(string: "https://docs.ophanim.io") {
+                if let url = URL(string: "https://ophanim.be/docs") {
                     NSWorkspace.shared.open(url)
                 }
             }
             Divider()
             Button("menubar.website", systemImage: "network") {
-                if let url = URL(string: "https://ophanim.io") {
+                if let url = URL(string: "https://ophanim.be") {
                     NSWorkspace.shared.open(url)
                 }
             }
             Button("menubar.github", systemImage: "arrow.up.right") {
-                if let url = URL(string: "https://github.com/Ophanim/Ophanim/") {
+                if let url = URL(string: "https://github.com/realytcracker/Ophanim") {
                     NSWorkspace.shared.open(url)
                 }
             }
